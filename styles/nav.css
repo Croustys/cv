@@ -1,0 +1,11 @@
+.nav {
+  width: 50px;
+  border-radius: 2em; 
+}
+.nav rect {
+  fill: white;
+  border-radius: 1;
+}
+.nav:hover {
+  background-color: rgb(143, 140, 140);
+}
