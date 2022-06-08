@@ -55,8 +55,11 @@ body {
 .profile-pic {
   position: absolute;
   max-width: 25em;
-  top: 17.4em;
+  top: 10em;
   right: 10em;
   animation: profilePicSlide 1s;
   clip-path: ellipse(50% 50% at 50% 50%);
+}
+nav {
+  margin-top: 0.8em;
 }

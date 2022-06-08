@@ -2,20 +2,26 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { startAnim, startInit, exitMotion } from "../lib/motionStates";
+import MenuButton from "../components/hamburger";
 
 export default function Home() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <motion.div initial={startInit} animate={startAnim} exit={exitMotion}>
       <div id="root">
         <h1 className="title outline">Barabás Ákos</h1>
-        <div className="nav">
-          <svg viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="13"></rect>
-            <rect id="mid-rect" y="30" width="100" height="13"></rect>
-            <rect y="60" width="100" height="13"></rect>
-          </svg>
-        </div>
+        <nav>
+          <MenuButton
+            isOpen={isNavOpen}
+            onClick={() => setIsNavOpen((prev) => !prev)}
+            strokeWidth="4"
+            color="#fff"
+            transition={{ ease: "easeOut", duration: 0.2 }}
+            width="40"
+            height="15"
+          />
+        </nav>
         <div className="catch-phrase outline">
           <p className="title-text">
             <span className="fontw brBlock">Web Developer</span>
